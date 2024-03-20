@@ -42,6 +42,19 @@ Manual Mode is currently WIP
 ## Getting Started
 
 To get started with SpotSeeker all you need to do is download the compiled executable for your OS (Currently only Windows will be built, but all OS's should work from manual build)
+You will also need to get a Client Id and Client Secret from [Spotify](https://developer.spotify.com/documentation/web-api/tutorials/getting-started)
+
+Once you have the above details, place the EXE in an empty folder and run it once with no arguments, this will create the `config.toml` file
+
+```toml
+spotify_client_id = "" # I'm sure you can guess what goes here
+spotify_client_key = "" # I'm sure you can guess what goes here
+soul_seek_username = "" # I'm sure you can guess what goes here
+soul_seek_password = "" # I'm sure you can guess what goes here
+```
+
+With the toml file filled out (The soulseek user/pass can totally be a throwaway account), run the app again and follow the onscreen guidance
+
 
 ### Prerequisites
 
