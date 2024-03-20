@@ -4,3 +4,8 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 completed/
+/SpotSeeker/completed/
+.idea/
+/SpotSeeker/config.toml
+
+*/config.toml
