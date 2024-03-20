@@ -30,7 +30,7 @@ jobs:
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/spotseeker
     - uses: montudor/action-zip@v1
       with:
-        args: zip -qq -r ${{env.DOTNET_ROOT}}/spotseeker.zip -i ${{env.DOTNET_ROOT}}/spotseeker
+        args: zip -qq -r ${{env.DOTNET_ROOT}}/spotseeker.zip . -i ${{env.DOTNET_ROOT}}/spotseeker
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
