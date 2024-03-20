@@ -29,11 +29,12 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/spotseeker
     - name: print
-      run: ls ${{env.DOTNET_ROOT}}/spotseeker/
-    - uses: vimtor/action-zip@v1.2
-      with:
-        files: ${{env.DOTNET_ROOT}}/spotseeker/
-        dest: out.zip      
+      run: ls ${{env.DOTNET_ROOT}}/spotseeker
+    - name: Upload to artifacts
+      uses: actions/upload-artifact@v2
+      with: 
+        name: SpotSeeker
+        path: ${{env.DOTNET_ROOT}}/spotseeker    
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
