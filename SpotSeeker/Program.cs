@@ -138,6 +138,8 @@ List<Task> downloadTasks = [];
 Directory.CreateDirectory(outputFolder);
 foreach (var track in tracks)
 {
+    if(track is null)
+        continue;
     try
     {
         await Task.Delay(1000);
