@@ -42,6 +42,7 @@ await AnsiConsole.Status()
 
         ctx.Status("Connecting to the SoulSeek network...");
         soulSeekClient = new SoulseekClient();
+        
         await soulSeekClient.ConnectAsync(config.SoulSeekUsername, config.SoulSeekPassword);
         AnsiConsole.MarkupLine("✅ Connected to SoulSeek network!");
 
@@ -94,6 +95,9 @@ trackTable.AddColumn("Album");
 
 foreach (var t in tracks)
 {
+    if(t is null)
+        continue;
+    
     var duration = TimeSpan.FromMilliseconds(t.DurationMs);
     try
     {
