@@ -30,11 +30,6 @@ jobs:
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/spotseeker -r win-x64 -p:PublishSingleFile=true --self-contained false
     - name: print
       run: ls ${{env.DOTNET_ROOT}}/spotseeker
-    - name: Upload to artifacts
-      uses: actions/upload-artifact@v2
-      with: 
-        name: SpotSeeker
-        path: ${{env.DOTNET_ROOT}}/spotseeker    
       
     # - name: Create Release
     #   id: create_release
