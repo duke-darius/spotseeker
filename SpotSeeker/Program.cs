@@ -225,7 +225,7 @@ async Task DownloadFile(string username, Soulseek.File file, FullTrack track, st
     var flacFiles = files.Where(x => x.Value.HasFreeUploadSlot && x.Key.GetFileExtension().Equals(".flac", StringComparison.CurrentCultureIgnoreCase));
     if(debugLogs)
         AnsiConsole.WriteLine($"{flacFiles.Count()} .flac files found");
-    if (flacFiles.Any())
+    /* if (flacFiles.Any())
     {
         var r = flacFiles.MaxBy(x => x.Key.Size);
         return (r.Value.Username, r.Key);
@@ -239,6 +239,7 @@ async Task DownloadFile(string username, Soulseek.File file, FullTrack track, st
         var r = wavFiles.MaxBy(x => x.Key.Size);
         return (r.Value.Username, r.Key);
     }
+    */
     
     var mp3Files = files.Where(x => x.Value.HasFreeUploadSlot && x.Key.GetFileExtension().Equals(".mp3", StringComparison.CurrentCultureIgnoreCase));
     if(debugLogs)
